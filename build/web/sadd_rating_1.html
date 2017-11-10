@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<title>jQuery star-rating.js Demos</title>
+
+	<link href="demo/css/styles.css" rel="stylesheet">
+	<link href="dist/star-rating.css" rel="stylesheet">
+
+	<style>
+		.gl-star-rating {
+			margin-bottom: 1em;
+		}
+
+		pre {
+			hyphens: none;
+			tab-size: 4;
+			white-space: pre;
+			word-break: normal;
+			word-spacing: normal;
+			word-wrap: normal;
+		}
+
+	</style>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div class="wrapper">
+
+	<section>
+
+
+		<select id="star-rating-1">
+			<option value="">Select a rating</option>
+			<option value="5">5</option>
+			<option value="4">4</option>
+			<option value="3">3</option>
+			<option value="2">2</option>
+			<option value="1">1</option>
+		</select>
+	<input type=button value=ok id=b1>
+	<script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+	<script src="demo/js/scale.fix.js"></script>
+	<script src="dist/star-rating.min.js"></script>
+
+	<script>
+	var x;
+		$('#b1').click(function(){
+
+		alert(x);
+		});
+		$( '#star-rating-1' ).starrating({
+			clickFn: function( selected ) {
+				console.log( 'I clicked star #' + selected );
+				x=selected;
+			},
+		});
+
+		StarRating.defaults.initialText = "Rate me";
+
+		$( '#star-rating-2' ).starrating();
+
+		$( '#star-rating-3' ).starrating();
+
+		$( '#star-rating-4' ).starrating();
+
+		var starrating = new StarRating( document.getElementById( 'star-rating-5' ), {
+			clearable: false,
+		}).init();
+
+	</script>
+</div>
+</body>
+</html>
